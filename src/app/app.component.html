@@ -1,0 +1,18 @@
+
+<div class="main">
+  <div class='content'>
+
+
+      <p>Search Packages By Location</p>
+      <br/>
+    <input type=text [(ngModel)]="city" /> <button (click)="getData()">Fetch Data</button>
+
+    <!--The code to display images -->
+    <div *ngFor="let tp of this.data" style="text-align:center">
+      <h3>
+       {{tp.name}}
+     </h3>
+     <h3>{{tp.id}}</h3>
+    </div>
+  </div>
+</div>
