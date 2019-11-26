@@ -6,13 +6,20 @@
       <p>Search Packages By Location</p>
       <br/>
     <input type=text [(ngModel)]="city" /> <button (click)="getData()">Fetch Data</button>
+    <div>
 
-    <!--The code to display images -->
-    <div *ngFor="let tp of this.data" style="text-align:center">
-      <h3>
-       {{tp.name}}
-     </h3>
-     <h3>{{tp.id}}</h3>
+      <div *ngFor="let tp of data" style="text-align:center">    
+      <p>Package: {{tp[0].name}}</p>      
+      <p>Description: {{tp[0].description}}</p>      
+      <p>Days: {{tp[0].numberOfDays}}</p> 
+      <p>Price: ${{tp[0].rrp}}</p>
+      <hr/>           
+        
+       
+       
+      
+  
     </div>
+    {{travelPackageid}}
   </div>
 </div>
